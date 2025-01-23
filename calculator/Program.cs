@@ -18,13 +18,26 @@ namespace calculator
             Console.WriteLine("Az elvégzendő művelet jele: ");
 			string opjel = Console.ReadLine();
 
-            double eredmeny = Osszeadas(szam1, szam2);
 
+            if (opjel == "+")
+            {
+            double eredmeny = Osszeadas(szam1, szam2);
             Console.WriteLine("Az összeg: " + eredmeny);
+            }
+            else if (opjel == "-")
+            {
+                double eredmeny = Kivonas(szam1, szam2);
+                Console.WriteLine("Az összeg: " + eredmeny);
+            }
+
         }
         static double Osszeadas(double szam1, double szam2)
         {
             return szam1 + szam2;
+        }
+        static double Kivonas(double szam1, double szam2)
+        {
+            return szam1 - szam2;
         }
 
         static void Main(string[] args)
