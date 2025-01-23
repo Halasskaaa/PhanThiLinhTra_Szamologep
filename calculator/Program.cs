@@ -39,6 +39,12 @@ namespace calculator
                 double eredmeny = Szorzas(szam1, szam2);
                 Console.WriteLine("Az összeg: " + eredmeny);
             }
+            else if (opjel == "%")
+            {
+                double eredmeny = Szazalek(szam1, szam2);
+                Console.WriteLine(szam1 + "-nak/-nek a(z) " + szam2 + " az " + eredmeny + " százaléka.");
+            }
+
         }
         static double Osszeadas(double szam1, double szam2)
         {
@@ -55,6 +61,10 @@ namespace calculator
         static double Szorzas(double szam1, double szam2)
         {  
             return szam1 * szam2;
+        }
+        static double Szazalek(double szam1, double szam2)
+        {
+            return szam2 / szam1 * 100;
         }
 
         static void Main(string[] args)
